@@ -1,7 +1,9 @@
 <h1>hacktivism</h1>
-==========
-focus on :
-  gather the site be hacked(/cracked) all over the world.
+
+<h2>focus on :</h2>
+<ul>
+  <li>gather the site be hacked(/cracked) all over the world.</li>
   
-  mapping the status of cracked sites
+  <li>mapping the status of cracked sites.</li>
+</ul>
 
