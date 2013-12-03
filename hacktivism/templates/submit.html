@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static '/static/css/style.css' %}"  /> 
+{% endblock stylesheet %}
+
+{% block content %}
+    <h2>submit defacements</h2>
+    <form action="" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit" />
+    </form>
+    
+    
+{% endblock %}

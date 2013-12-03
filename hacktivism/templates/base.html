@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="{{ LANGUAGE_CODE }}" lang="{{ LANGUAGE_CODE }}" >
+	<head>
+		<title>the last hack activity{% block title %}{% endblock title %}{% block title-page %}{% endblock title-page %}</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="language" content="{{ LANGUAGE_CODE }}" />
+		<meta name="keyword" content="{% block keywords %}{% endblock keywords %}" />
+		<meta name="author" content="西风剑吼" />
+		{% block meta %}{% endblock meta %}
+		<link rel="shortcut icon" href="{% static "static/img/favicon.ico" %}" />
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="{% static "css/screen.css" %}" />
+		{% block stylesheet %}{% endblock stylesheet %}
+	</head>
+	<body>
+		<div class="container">
+			<div id="header">
+				{% block header %}{% endblock header %}
+				<ul id="top-navigation">
+					<!--<a href="#" title="" class=""></a>-->
+					{% block top-navigation %}{% endblock top-navigation %}
+				</ul>
+			</div>
+			<div id="content">
+				{% block content %}{% endblock content %}
+				{% block trans_link %}{% endblock trans_link %}
+			</div>
+			<div id="sidebar">
+				{% block toolbar %}{% endblock toolbar %}
+			</div>
+			<div id="footer">
+				<p>
+				{% block trans %}Powered by<a href="http://wwww.djangoprodject.com">Django</a>
+										   <a href="#">ShellTest</a>
+				{% endblock trans %}
+			</div>
+			
+		</div>
+	</body>
+</html>

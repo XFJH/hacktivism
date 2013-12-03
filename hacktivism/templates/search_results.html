@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>You searched for:<strong>{{ query }} </strong></p>
+    {% if Notifier %}
+        <ul>
+            {% for one in Notifier %}
+                <li>{{ one.name }} </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No notifier matched your search criteria.</p>
+    {% endif %}
+{% endblock content %}

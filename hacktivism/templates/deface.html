@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block stylesheet %}
+    <link rel="stylesheet" type="text/css" href="{% static '/static/css/style.css' %}"  /> 
+{% endblock stylesheet %}
+
+{% block header %}
+    
+{% endblock header %}
+
+
+{% block content %}
+    <p>here is the explain table information</p>
+    <table>
+        <tbody>
+            {% for item in defacements %}
+                <tr>
+                <td> {{ item.time }} </td>
+                <td> {{ man }} </td>
+                <td> {{ item.notifier }} </td>
+                <td> {{ item.notifier_word }} </td>
+                <td> {{ item.full_path }} </td>
+                <td> {{ item.h_deface }} </td>
+                <td> {{ item.m_deface }} </td>
+                <td> {{ item.s_deface }} </td>
+                <td> {{ item.r_deface }} </td>
+                <td><a href="{{item.full_path}}">bus</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>  
+    </table>
+{% endblock content %}
